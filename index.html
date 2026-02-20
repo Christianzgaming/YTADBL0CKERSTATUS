@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>YouTube Ad Blocker · pure icons</title>
+    <style>
+        /* GLOBAL RESET — no scroll, exact fit, YouTube vibe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;                /* kill scrollbars completely */
+            background: #0e0e0e;              /* deep black background (YouTube dark theme) */
+            font-family: 'YouTube Sans', 'Roboto', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+        /* main container – YouTube dark gradient */
+        .alert-panel {
+            width: 100vw;
+            height: 100vh;
+            background: #0b0b0b;               /* pure black base */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2vh 3vw;
+            box-shadow: inset 0 0 0 1px #333;   /* subtle border */
+        }
+
+        .card {
+            max-width: 680px;
+            width: 100%;
+            background: #121212;                 /* YouTube dark card */
+            border-radius: 42px;
+            border: 2px solid #272727;
+            padding: 2.2rem 2rem 2.5rem;
+            box-shadow: 0 25px 45px rgba(0,0,0,1);
+        }
+
+        /* YOUTUBE AD BLOCKER UPDATE! – YouTube red header */
+        .header-strip {
+            background: #ff0000;                  /* YouTube red */
+            border-radius: 40px;
+            padding: 0.7rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 2px solid #cc0000;
+            box-shadow: 0 10px 0 #8b0000;
+        }
+
+        .header-strip span {
+            font-weight: 900;
+            font-size: 2rem;
+            letter-spacing: 2.5px;
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #6b0000;
+        }
+
+        /* main attention block – dark with red accents */
+        .attention-box {
+            background: #181818;                  /* dark gray like YouTube comments */
+            border-radius: 32px;
+            padding: 1.5rem 1.8rem 2rem;
+            border: 2px solid #303030;
+            box-shadow: inset 0 0 10px #00000066;
+        }
+
+        .warning-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .warning-symbol {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 5px #ff4d4d);
+        }
+
+        .warning-text {
+            color: #ff4e4e;                       /* bright YouTube red */
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 8px rgba(255,0,0,0.5);
+        }
+
+        .main-message {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.9rem;
+            line-height: 1.4;
+            color: #f1f1f1;                        /* white-ish YouTube text */
+            margin: 1.2rem 0 1.5rem;
+            text-transform: uppercase;
+            word-break: break-word;
+            text-shadow: 0 2px 0 #00000070;
+        }
+
+        .main-message span.highlight {
+            background: #ff000020;
+            padding: 0.1rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            color: #ff9999;                         /* soft red highlight */
+            border: 1px solid #ff0000;
+        }
+
+        /* social block – YouTube gray/black with red glint */
+        .social-box {
+            background: #212121;                     /* YouTube dark element */
+            border-radius: 30px;
+            padding: 1.5rem 1.2rem 1.2rem;
+            margin: 1.8rem 0 2.2rem;
+            border: 2px solid #ff0000;               /* red border */
+            box-shadow: inset 0 1px 3px black, 0 0 10px #ff000050;
+        }
+
+        .social-head {
+            text-align: center;
+            text-transform: uppercase;
+            color: #ff5e5e;                           /* red tint */
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-bottom: 1.4rem;
+            text-shadow: 0 0 5px red;
+        }
+
+        .handle-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .handle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: #2d2d2d;                       /* dark button */
+            border: 2px solid #ff0000;
+            border-radius: 60px;
+            padding: 1rem 1rem;
+            text-decoration: none;
+            transition: 0.1s ease;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+            box-shadow: 0 5px 0 #7a0000;
+            cursor: pointer;
+        }
+
+        .handle-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #7a0000;
+        }
+
+        .handle-btn.facebook {
+            background: #2d2d2d;
+            border-color: #ff0000;
+        }
+
+        .handle-btn.instagram {
+            background: #2d2d2d;
+            border-color: #ff0000;
+        }
+
+        /* --- PURE ICONS: just "f" and "ig" in a circle --- */
+        .pure-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ff0000;               /* YouTube red background */
+            color: white;
+            font-weight: 900;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            line-height: 1;
+            text-transform: uppercase;
+            box-shadow: 0 2px 0 #7a0000, 0 0 0 2px #ff6666 inset;
+            margin-right: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        /* adjust spacing inside button */
+        .handle-btn span:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* update button – YouTube red style */
+        .update-wrapper {
+            text-align: center;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .media-btn {
+            display: inline-block;
+            background: #ff0000;                       /* solid YouTube red */
+            background: linear-gradient(145deg, #ff1a1a, #cc0000);
+            color: white;
+            font-weight: 900;
+            font-size: 2.4rem;
+            padding: 1.2rem 2.8rem;
+            border-radius: 80px;
+            text-decoration: none;
+            border: 3px solid #ff6666;
+            box-shadow: 0 13px 0 #8b0000, 0 0 0 2px #ff4d4d inset;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            width: 100%;
+            max-width: 450px;
+            transition: all 0.06s linear;
+            cursor: pointer;
+        }
+
+        .media-btn:active {
+            transform: translateY(7px);
+            box-shadow: 0 6px 0 #8b0000, 0 0 0 2px #ff4d4d inset;
+        }
+
+        /* tiny extra text at bottom – now with red links */
+        .footer-meta {
+            text-align: center;
+            color: #aaa;
+            font-size: 1rem;
+            font-weight: 400;
+            border-top: 1px dashed #ff0000;
+            padding-top: 1rem;
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-meta span a {
+            color: #ff8080;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-meta span a:hover {
+            text-decoration: underline;
+            color: #ff0000;
+        }
+
+        /* no scroll, everything fits exactly */
+        @media (max-aspect-ratio: 1/1) {
+            .card { padding: 1.2rem; }
+            .header-strip span { font-size: 1.7rem; }
+            .warning-text { font-size: 1.8rem; }
+            .main-message { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-panel">
+        <div class="card">
+            <!-- TOP RED BANNER: YOUTUBE AD BLOCKER UPDATE! (YouTube style) -->
+            <div class="header-strip">
+                <span>📢 YOUTUBE AD BLOCKER UPDATE!</span>
+            </div>
+
+            <!-- main alert box with YouTube colors -->
+            <div class="attention-box">
+                <!-- ⚠ ATTENTION! with red warning -->
+                <div class="warning-line">
+                    <span class="warning-symbol">⚠️</span>
+                    <span class="warning-text">ATTENTION!</span>
+                    <span class="warning-symbol">⚠️</span>
+                </div>
+
+                <!-- the two‑line message exactly as image, with YouTube red accents -->
+                <div class="main-message">
+                    <span class="highlight">PLEASE UPDATE THE EXTENSION</span><br>
+                    TO UPDATE THE EXTENSION BY THE<br>
+                    <span style="color:#ff4d4d; font-weight:900;">NEW EXTENSION APP</span>
+                </div>
+
+                <!-- SOCIAL MEDIA block with PURE icons: f / ig (no emoji, no unicode) -->
+                <div class="social-box">
+                    <div class="social-head">📬 MESSAGE ON</div>
+                    <div class="handle-row">
+                        <!-- FACEBOOK: pure "f" icon -->
+                        <a href="https://www.facebook.com/chanzkiepogi" target="_blank" class="handle-btn facebook">
+                            <span><span class="pure-icon">f</span></span>
+                            <span>Facebook: <strong>@chanzkiepogi</strong></span>
+                        </a>
+                        <!-- INSTAGRAM: pure "ig" icon (two letters but inside circle) -->
+                        <a href="https://www.instagram.com/chnzai1_/" target="_blank" class="handle-btn instagram">
+                            <span><span class="pure-icon">ig</span></span>
+                            <span>Instagram: <strong>@chnzai_</strong></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- UPDATE HERE button – redirects to mediafire.com (root) as requested, YouTube red style -->
+                <div class="update-wrapper">
+                    <a href="https://www.mediafire.com" target="_blank" class="media-btn">
+                        ⚡ UPDATE HERE ⚡
+                    </a>
+                </div>
+
+                <!-- bottom line replicating the original text with red links -->
+                <div class="footer-meta">
+                    <span>📘 <a href="https://facebook.com/chanzkiepogi" target="_blank">@chanzkiepogi</a></span>
+                    <span>📸 <a href="https://instagram.com/chnzai1_/" target="_blank">@chnzai_</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
